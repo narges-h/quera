@@ -5,31 +5,34 @@ for($i = 0;$i < 4;$i++){
     $num = intval($num1);  
     array_push($aray,$num);
 }
-
-function sum($aray){
-    $sum = 0;
-    foreach($aray as $i){
-        $sum += $i;
+class Operation{
+    public function sum($aray){
+        $sum = 0;
+        foreach($aray as $i){
+            $sum += $i;
+        }
+        return $sum;
     }
-    return $sum;
-}
-$sum = sum($aray);
-echo "Sum : ".number_format($sum,6)."\n";
-
-function avg($sum){
-    $avg = $sum/4;
-    return $avg;
-}
-echo "Average : ".number_format(avg($sum),6)."\n";
-
-function pro($aray){
-    $pro = 1;
-    foreach($aray as $i){
-        $pro *= $i;
+    public function avg($sum){
+        $avg = $sum/4;
+        return $avg;
     }
-    return $pro;
+    public function pro($aray){
+        $pro = 1;
+        foreach($aray as $i){
+            $pro *= $i;
+        }
+        return $pro;
+    }
 }
-echo "Product : ".number_format(pro($aray),6)."\n";
+
+$opt = new Operation();
+$summ = $opt->sum($aray);
+echo "Sum : ".number_format($summ,6)."\n";
+$avgg = $opt->avg($summ);
+echo "Average : ".number_format($avgg,6)."\n";
+$proo = $opt->pro($aray);
+echo "Product : ".number_format($proo,6)."\n";
 
 echo "MAX : ".number_format(max($aray),6)."\n";
 
