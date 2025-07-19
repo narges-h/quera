@@ -1,13 +1,16 @@
 <?php
-$n = readline("lenght:");
-$string = readline("string:");
-$k = readline("repead :");
+$n = readline();
+$k = readline();
+$string = readline();
 
 for ($i = 0; $i < $k; $i++) {
-    $str = substr($string, -1) . substr($string, 0, strlen($string) - 1);
+    $str = substr($string, -1) . substr($string, 0, - 1);
     $newStr = "";
 
-    for ($j = 0; $j < strlen($str); $j++) {
+
+    $length = strlen($str);
+
+    for ($j = 0; $j < $length; $j++) {
         $char = $str[$j];
         if ($char == 'z') {
             $newStr .= 'a';

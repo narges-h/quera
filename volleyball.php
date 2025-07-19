@@ -1,30 +1,28 @@
 <?php
-$t = readline("enter set:\n");
-$datas = [];
 
-for ($i = 1; $i <= (int)$t; $i++) {
-    $score = readline("score:\n");
-    $str = readline("str:");
-    $datas[] = $str;
-}
+$t = (int) readline();
 
+for ($set = 0; $set < $t; $set++) {
+    $n = (int) readline();
+    $scores = trim(readline());
 
-foreach ($datas as $data) {
-    $string = str_split($data);
-    $tedad_c = 0;
-    $tedad_q = 0;
+    $codeCup = 0;
+    $quera = 0;
 
-    for ($i = 0; $i < count($string); $i++) {
-        if ($string[$i] == "C") {
-            $tedad_c++;
-        } elseif ($string[$i] == "Q") {
-            $tedad_q++;
+    for ($i = 0; $i < $n; $i++) {
+        if ($scores[$i] === 'C') {
+            $codeCup++;
+        } elseif ($scores[$i] === 'Q') {
+            $quera++;
+        }
+
+        if ($codeCup === 25) {
+            echo "CodeCup\n";
+            break;
+        } elseif ($quera === 25) {
+            echo "Quera\n";
+            break;
         }
     }
-
-    if ($tedad_c > $tedad_q) {
-        echo "CodeCup\n";
-    } elseif ($tedad_q > $tedad_c) {
-        echo "Quera\n";
-    }
 }
+

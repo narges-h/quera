@@ -1,13 +1,12 @@
 <?php
 $num = readline();
-$num1 = intval($num);
 $count = 0;
 for($i = 0;$i <4 ;$i++){
     $count++;
     echo "########.......########\n";
-    if($count <= $num1){
+    if($count <= $num){
         echo "#ghorfe".$count++.".......";
-        if($count <= $num1){
+        if($count <= $num){
             echo "ghorfe".$count."#\n";
         }
         else{
