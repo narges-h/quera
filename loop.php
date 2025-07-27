@@ -63,8 +63,8 @@
 // }
 
 
-$x = readline();
-$x1 = intval($x);
+$x = "10";
+$x1 = (intval($x));
 for($i = 0;$i <= $x1;$i++){
     for($j = $x1;$j >= $i;$j--){
         echo " ";
