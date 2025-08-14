@@ -4,7 +4,7 @@ $k = readline();
 $string = readline();
 
 for ($i = 0; $i < $k; $i++) {
-    $str = substr($string, -1) . substr($string, 0, - 1);
+    $str = ramz . phpsubstr($string, -1) . substr($string, 0, -1);
     $newStr = "";
 
 

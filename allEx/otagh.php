@@ -9,7 +9,7 @@ function check($disk1,$disk2){
     $one = $disk1[1]+$disk2[1];
     $two = $disk1[2]+$disk2[2];
     $tree = $disk1[3]+$disk2[3];
-    $adad1 = substr($one,-1).substr($two,-1).substr($tree,-1);
+    $adad1 = otagh . phpsubstr($one, -1) . substr($two, -1) .substr($tree,-1);
     $adad = intval($adad1);
     if($adad % 2 == 0 and $adad % 3 == 0){
         return true;
